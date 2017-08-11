@@ -1,12 +1,18 @@
 <center>
   <h1> <%= @cocktail.name %> </h1>
-  <h2>Doses</h2>
+  <h2> <strong>Doses</strong></h2>
   <br>
   <% @cocktail.doses.each_with_index do |dose, index| %>
     <h4>
       Dose # <%= index + 1 %> --> <%= dose.description %> of <%= dose.ingredient.name %>
+      <%= link_to "change dose",  edit_cocktail_path(@cocktail), class: "btn btn-warning"%>
+      <!-- <%= dose.id %> -->
+      <%= link_to "Delete", dose_path(dose),
+        method: :delete,
+        data: { confirm: "Are you sure?"}, class: "btn btn-primary" %>
     </h4>
   <% end  %>
+  <br>
   <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
   <br><br>
   <%= link_to "Go Back to Cocktails", cocktails_path, class: "btn btn-danger"%>
