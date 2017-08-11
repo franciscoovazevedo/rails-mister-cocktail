@@ -9,16 +9,16 @@
 
 
 # 1st do this some times (3 or 4)
-12.times do
-  ingredient = Ingredient.new( name:Faker::Food.ingredient)
-  ingredient.save!
-end
+# 12.times do
+#   ingredient = Ingredient.new( name:Faker::Food.ingredient)
+#   ingredient.save!
+# end
 
 # 2nd this only one (we just want 10 cocktails)
-# 10.times do
-#   cocktail = Cocktail.new(name: Faker::Book.title)
-#   cocktail.save
-# end
+10.times do
+  cocktail = Cocktail.new(name: Faker::Book.title)
+  cocktail.save
+end
 
 
 # 1st run the 1st line, then the second.
