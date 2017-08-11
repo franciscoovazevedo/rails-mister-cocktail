@@ -9,7 +9,7 @@
 
 
 # 1st do this some times (3 or 4)
-10.times do
+12.times do
   ingredient = Ingredient.new( name:Faker::Food.ingredient)
   ingredient.save!
 end
